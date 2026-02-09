@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Cape Town Fire & Maintenance Services</title>
   <meta name="description" content="Professional fire safety, maintenance and compliance services across South Africa." />
 
@@ -16,17 +15,12 @@
 
 <body class="bg-gray-50 text-gray-800">
 
-<!-- HEADER / NAV  -->
+<!-- HEADER / NAV -->
 <header class="shadow sticky top-0 z-50">
   <div class="nav-container">
-
     <!-- Logo -->
     <div class="flex items-center">
-      <img
-        src="images/CFMTlogo.png"
-        alt="Cape Town Fire & Maintenance Services Logo"
-        class="site-logo"
-      />
+      <img src="images/CFMTlogo.png" alt="Cape Town Fire & Maintenance Services Logo" class="site-logo"/>
     </div>
 
     <!-- Desktop Nav -->
@@ -37,9 +31,7 @@
     </nav>
 
     <!-- Mobile Menu Button -->
-    <button id="menuBtn" class="md:hidden text-2xl">
-      ☰
-    </button>
+    <button id="menuBtn" class="md:hidden text-2xl">☰</button>
   </div>
 
   <!-- Mobile Menu -->
@@ -53,66 +45,66 @@
 <!-- HERO -->
 <section class="hero">
   <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-
-    <!-- Text -->
     <div>
       <h1>Welcome to Cape Town Fire & Maintenance Services</h1>
       <p>Specialising in Essential Fire Protection Services, Maintenance, Design and Installations</p>
-
       <div class="flex gap-4 flex-wrap">
         <a href="tel:+27 21 981 0275" class="btn-primary">Call Now</a>
         <a href="#contact" class="btn-secondary">Get a Quote</a>
       </div>
     </div>
-
-    <!-- Image -->
     <div class="hero-image">
-      <img
-        src="images/fire.jpg"
-        alt="Fire maintenance service vehicles and building"
-      />
+      <img src="images/fire.jpg" alt="Fire maintenance service vehicles and building"/>
     </div>
-
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="max-w-7xl mx-auto px-4 py-20">
-  <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+<section id="services" class="services-section">
+  <h2 class="services-title">Our Services</h2>
 
-  <div class="grid md:grid-cols-3 gap-8">
+  <div class="services-wrapper">
+    <button class="scroll-btn left" aria-label="Scroll left">&#10094;</button>
 
-    <div class="bg-white p-6 rounded-xl shadow">
-      <h3 class="text-xl font-bold mb-3">Fire System Maintenance</h3>
-      <p class="text-gray-600 mb-4">Routine inspections, testing and certification to ensure compliance.</p>
-      <a href="#contact" class="btn-primary">Request Service</a>
+    <div class="services-carousel" id="servicesCarousel">
+      <div class="service-card">
+        <h3>Maintenance</h3>
+        <p>Routine inspections, testing and certification to ensure compliance.</p>
+        <a href="#contact" class="btn-primary">Request Service</a>
+      </div>
+      <div class="service-card">
+        <h3>Installations</h3>
+        <p>Professional installation of alarms, detection and suppression systems.</p>
+        <a href="#contact" class="btn-primary">Request Service</a>
+      </div>
+      <div class="service-card">
+        <h3>Sales</h3>
+        <p>Supply of extinguishers, hose reels and safety equipment.</p>
+        <a href="#contact" class="btn-primary">Request Service</a>
+      </div>
+      <div class="service-card">
+        <h3>Fire Design</h3>
+        <p>Custom fire protection system design and engineering.</p>
+        <a href="#contact" class="btn-primary">Request Service</a>
+      </div>
+      <div class="service-card">
+        <h3>Fire Suppression Systems</h3>
+        <p>Design and installation of advanced fire suppression systems.</p>
+        <a href="#contact" class="btn-primary">Request Service</a>
+      </div>
     </div>
 
-    <div class="bg-white p-6 rounded-xl shadow">
-      <h3 class="text-xl font-bold mb-3">Fire Installations</h3>
-      <p class="text-gray-600 mb-4">Professional installation of alarms, detection and suppression systems.</p>
-      <a href="#contact" class="btn-primary">Request Service</a>
-    </div>
-
-    <div class="bg-white p-6 rounded-xl shadow">
-      <h3 class="text-xl font-bold mb-3">Fire Equipment Sales</h3>
-      <p class="text-gray-600 mb-4">Supply of extinguishers, hose reels and safety equipment.</p>
-      <a href="#contact" class="btn-primary">Request Service</a>
-    </div>
-
+    <button class="scroll-btn right" aria-label="Scroll right">&#10095;</button>
   </div>
+
+  <!-- Carousel hints & dots -->
+  <div class="carousel-dots" id="carouselDots"></div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="bg-white py-20">
   <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-
-    <img
-      src="images/about-team.jpg"
-      alt="Certified fire safety technicians"
-      class="rounded-xl"
-    />
-
+    <img src="images/about-team.jpg" alt="Certified fire safety technicians" class="rounded-xl"/>
     <div>
       <h2 class="text-3xl font-bold mb-6">About Us</h2>
       <p class="text-gray-600 mb-4">
@@ -122,20 +114,17 @@
         With over 25 years of industry experience, we ensure your premises are fully compliant with South African fire safety regulations and standards.
       </p>
     </div>
-
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="max-w-4xl mx-auto px-4 py-20">
   <h2 class="text-3xl font-bold text-center mb-12">Request a Quote</h2>
-
   <form class="bg-white p-8 rounded-xl shadow grid gap-4">
     <input type="text" placeholder="Full Name" />
     <input type="email" placeholder="Email Address" />
     <input type="tel" placeholder="Phone Number" />
     <textarea rows="4" placeholder="Service Required"></textarea>
-
     <button type="submit" class="btn-primary">Submit Request</button>
   </form>
 </section>
@@ -151,34 +140,126 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-
     <div class="footer-section">
       <h4 class="footer-heading">Contact</h4>
-      <p>Phone: +27 21 981 0275</p>
-      <p>Email: info@firemaintenance.co.za</p>
+      <a href="tel:+27219810275" class="text-gray-300 hover:text-gray-100">Phone: +27 21 981 0275</a>
+      <p>Email: <a href="mailto:info@firemaintenance.co.za" class="text-gray-300 hover:text-gray-100">info@firemaintenance.co.za</a></p>
+      <a href="https://www.google.com/maps/place/Unit+3,+Saxenburg+Park,+2+Pontac+Rd,+Kuils+River,+Cape+Town,+7580/" target="_blank" class="text-gray-300 hover:text-gray-100">Location: Unit 3, 2 Pontac Road, Saxenburg Park, Kuilsrive</a>
     </div>
   </div>
-
   <div class="footer-logos-wrapper">
     <div class="footer-logos">
       <img src="images/white.png" alt="SABS Registered" class="footer-logo" />
       <img src="images/FIRE.png" alt="SAQCC Fire Registered" class="footer-logo" />
     </div>
   </div>
-
   <div class="footer-bottom">
     © 2026 Cape Town Fire & Maintenance Services
   </div>
 </footer>
 
-<!-- MOBILE MENU SCRIPT -->
+<!-- =========================
+     SCRIPTS
+========================= -->
 <script>
+  // Mobile menu toggle
   const menuBtn = document.getElementById("menuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
-
   menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
   });
+
+  // Carousel scroll buttons
+  const carousel = document.getElementById('servicesCarousel');
+  const scrollAmount = 350;
+
+  document.querySelector('.scroll-btn.left').addEventListener('click', () => {
+    carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  document.querySelector('.scroll-btn.right').addEventListener('click', () => {
+    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+
+  // Carousel dots
+  const cards = document.querySelectorAll('.service-card');
+  const dotsContainer = document.getElementById('carouselDots');
+  let currentIndex = 0;
+  let autoScrollInterval;
+
+  // Create dots
+  cards.forEach((_, index) => {
+    const dot = document.createElement('button');
+    if (index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => scrollToCard(index));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = dotsContainer.querySelectorAll('button');
+
+  function scrollToCard(index) {
+    carousel.scrollTo({
+      left: cards[index].offsetLeft - carousel.offsetLeft,
+      behavior: 'smooth'
+    });
+    setActiveDot(index);
+  }
+
+  function setActiveDot(index) {
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+    currentIndex = index;
+  }
+
+  
+// Update dot on scroll (only for mobile)
+carousel.addEventListener('scroll', () => {
+  if (window.innerWidth > 768) return; // do nothing on desktop
+
+  let activeIndex = 0;
+  const carouselCenter = carousel.scrollLeft + carousel.offsetWidth / 2;
+  cards.forEach((card, index) => {
+    const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+    if (Math.abs(carouselCenter - cardCenter) < card.offsetWidth / 2) {
+      activeIndex = index;
+    }
+  });
+
+  setActiveDot(activeIndex);
+});
+
+
+
+  // Auto-scroll on mobile
+  function startAutoScroll() {
+    if (window.innerWidth > 768) return;
+    autoScrollInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % cards.length;
+      scrollToCard(currentIndex);
+    }, 4000);
+  }
+
+  function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
+  }
+
+  carousel.addEventListener('touchstart', stopAutoScroll);
+  carousel.addEventListener('mouseenter', stopAutoScroll);
+  carousel.addEventListener('mouseleave', startAutoScroll);
+
+  startAutoScroll();
+
+  // Lazy load animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => observer.observe(card));
 </script>
 
 </body>
