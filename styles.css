@@ -412,9 +412,10 @@ textarea:focus {
     scroll-snap-type: x mandatory; /* snap cards into view */
     overflow-x: auto;
   }
+/* Hide carousel scroll buttons on mobile */
 @media (max-width: 768px) {
-  .scroll-btn {
-    display: none; /* hide desktop scroll buttons on mobile */
+  .services-wrapper .scroll-btn {
+    display: none !important; /* force hide */
   }
 }
 
