@@ -406,16 +406,19 @@ textarea:focus {
    RESPONSIVE / MOBILE
    ========================= */
 @media (max-width: 768px) {
-  .scroll-btn {
-    display: none;
+  .services-carousel {
+    gap: 1rem;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory; /* snap cards into view */
+    overflow-x: auto;
   }
 
   .service-card {
-    min-width: 85%;
+    min-width: 85%;      /* each card takes ~85% of mobile width */
     max-width: 85%;
-    scroll-snap-align: center;
-    padding: 2rem 1.75rem;
+    scroll-snap-align: center; /* snap each card to center */
     border-radius: 1.5rem;
+    padding: 2rem 1.75rem;
   }
 
   .service-card h3 {
