@@ -493,3 +493,41 @@ textarea:focus {
     padding: 0 0.5rem;
   }
 }
+
+/*=========Image Optimization========*/
+.service-card {
+  display: block; /* important: remove any flex or space-between */
+  min-height: 480px; /* optional: make card taller if needed */
+  padding: 2rem; 
+}
+
+.service-buttons {
+  margin-top: 2rem; /* moves the buttons down */
+}
+
+.more-info-link {
+  color: var(--brand-green);
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.more-info-link:hover {
+  color: var(--brand-green-dark);
+}
+
+.service-image {
+  width: 100%;             /* full width of the card */
+  height: 180px;           /* fixed height for uniformity */
+  object-fit: cover;       /* fills the area without distortion */
+  border-radius: 1rem;     /* smooth rounded corners */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1); /* subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;  /* space below image */
+}
+
+.service-image:hover {
+  transform: scale(1.03);  /* small zoom on hover */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
