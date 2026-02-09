@@ -412,6 +412,11 @@ textarea:focus {
     scroll-snap-type: x mandatory; /* snap cards into view */
     overflow-x: auto;
   }
+@media (max-width: 768px) {
+  .scroll-btn {
+    display: none; /* hide desktop scroll buttons on mobile */
+  }
+}
 
   .service-card {
     min-width: 85%;      /* each card takes ~85% of mobile width */
