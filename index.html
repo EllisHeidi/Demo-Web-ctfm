@@ -25,7 +25,22 @@
 
     <!-- Desktop Nav -->
     <nav class="nav-links hidden md:flex items-center">
-      <a href="#services">Services</a>
+      <!-- Services Dropdown -->
+      <div class="relative dropdown">
+        <button class="dropdown-toggle flex items-center">
+          Services
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <a href="./Services/Maintenance.html">Maintenance</a>
+          <a href="./Services/Installations.html">Installations</a>
+          <a href="./Services/Sales.html">Sales</a>
+          <a href="./Services/Fire Design.html">Fire Design</a>
+          <a href="./Services/Fire Suppression Systems.html">Fire Suppression Systems</a>
+        </div>
+      </div>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -36,7 +51,22 @@
 
   <!-- Mobile Menu -->
   <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 bg-white">
-    <a href="#services" class="block py-2">Services</a>
+    <!-- Mobile Services Dropdown -->
+    <div class="mobile-dropdown">
+      <button class="mobile-dropdown-toggle block py-2 w-full text-left flex items-center justify-between">
+        Services
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="mobile-dropdown-content hidden pl-4">
+        <a href="./Services/Maintenance.html" class="block py-2 text-sm">Maintenance</a>
+        <a href="./Services/Installations.html" class="block py-2 text-sm">Installations</a>
+        <a href="./Services/Sales.html" class="block py-2 text-sm">Sales</a>
+        <a href="./Services/Fire Design.html" class="block py-2 text-sm">Fire Design</a>
+        <a href="./Services/Fire Suppression Systems.html" class="block py-2 text-sm">Fire Suppression Systems</a>
+      </div>
+    </div>
     <a href="#about" class="block py-2">About</a>
     <a href="#contact" class="block py-2">Contact</a>
   </div>
@@ -75,29 +105,51 @@
 
     <div class="service-buttons flex justify-between items-center mt-6">
       <a href="#contact" class="btn-primary">Request Service</a>
-      <a href="/Services/Maintenance.html" class="more-info-link">More Info</a>
+      <a href="./Services/Maintenance.html" class="more-info-link">More Info</a>
     </div>
   </div>
 
   <div class="service-card">
     <h3>Installations</h3>
-    <img src="./images/installations.jpg" alt="Fire installation technician installing system" class="service-image">
+    <img src="./images/installation-1.jpg" alt="Fire installation technician installing system" class="service-image">
     <p>Professional installation of alarms, detection and suppression systems.</p>
 
     <div class="service-buttons flex justify-between items-center mt-6">
       <a href="#contact" class="btn-primary">Request Service</a>
-      <a href="/Services/Installations.html" class="more-info-link">More Info</a>
+      <a href="./Services/Installations.html" class="more-info-link">More Info</a>
     </div>
   </div>
 
   <div class="service-card">
     <h3>Sales</h3>
-    <img src="./images/sales.jpg" alt="Fire safety equipment on display" class="service-image">
+    <img src="./images/installations.jpg" alt="Fire safety equipment on display" class="service-image">
     <p>Supply of extinguishers, hose reels and safety equipment.</p>
 
     <div class="service-buttons flex justify-between items-center mt-6">
       <a href="#contact" class="btn-primary">Request Service</a>
-      <a href="/Services/Sales.html" class="more-info-link">More Info</a>
+      <a href="./Services/Sales.html" class="more-info-link">More Info</a>
+    </div>
+  </div>
+
+    <div class="service-card">
+    <h3>Fire Design</h3>
+    <img src="./images/fire-design.jpg" alt="Fire safety equipment on display" class="service-image">
+    <p>Design and engineering of fire protection systems tailored to your specific needs.</p>
+
+    <div class="service-buttons flex justify-between items-center mt-6">
+      <a href="#contact" class="btn-primary">Request Service</a>
+      <a href="./Services/Fire Design.html" class="more-info-link">More Info</a>
+    </div>
+  </div>
+
+    <div class="service-card">
+    <h3>Fire Suppression Systems</h3>
+    <img src="./images/abt-fire.png" alt="Fire suppression system installation" class="service-image">
+    <p>Installation and maintenance of fire suppression systems.</p>
+
+    <div class="service-buttons flex justify-between items-center mt-6">
+      <a href="#contact" class="btn-primary">Request Service</a>
+      <a href="./Services/Fire Suppression Systems.html" class="more-info-link">More Info</a>
     </div>
   </div>
 
@@ -176,6 +228,33 @@
   const mobileMenu = document.getElementById("mobileMenu");
   menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
+  });
+
+  // Desktop dropdown toggle
+  const dropdown = document.querySelector('.dropdown');
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  dropdownToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('active');
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('active');
+    }
+  });
+
+  // Mobile dropdown toggle
+  const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
+  const mobileDropdownContent = document.querySelector('.mobile-dropdown-content');
+
+  mobileDropdownToggle.addEventListener('click', () => {
+    mobileDropdownContent.classList.toggle('hidden');
+    const svg = mobileDropdownToggle.querySelector('svg');
+    svg.style.transform = mobileDropdownContent.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
   });
 
   // Carousel scroll buttons
