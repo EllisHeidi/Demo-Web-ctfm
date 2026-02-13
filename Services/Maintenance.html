@@ -27,7 +27,7 @@
 
     <!-- Desktop Nav -->
     <nav class="nav-links hidden md:flex items-center">
-      <a href="#hero">Home</a>
+      <a href="../index.html">Home</a>
       <!-- Services Dropdown -->
       <div class="relative dropdown">
         <button class="dropdown-toggle flex items-center">
@@ -37,15 +37,15 @@
           </svg>
         </button>
         <div class="dropdown-menu">
-          <a href="./Services/Maintenance.html">Maintenance</a>
-          <a href="./Services/Installations.html">Installations</a>
-          <a href="./Services/Sales.html">Sales</a>
-          <a href="./Services/Fire Design.html">Fire Design</a>
-          <a href="./Services/Fire Suppression Systems.html">Fire Suppression Systems</a>
+          <a href="./Maintenance.html">Maintenance</a>
+          <a href="./Installations.html">Installations</a>
+          <a href="./Sales.html">Sales</a>
+          <a href="./Fire Design.html">Fire Design</a>
+          <a href="./Fire Suppression Systems.html">Fire Suppression Systems</a>
         </div>
       </div>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
     </nav>
 
     <!-- Mobile Menu Button -->
@@ -54,7 +54,7 @@
 
   <!-- Mobile Menu -->
   <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 bg-white">
-    <a href="#hero" class="block py-2">Home</a>
+    <a href="../index.html" class="block py-2">Home</a>
     <!-- Mobile Services Dropdown -->
     <div class="mobile-dropdown">
       <button class="mobile-dropdown-toggle block py-2 w-full text-left flex items-center justify-between">
@@ -64,15 +64,15 @@
         </svg>
       </button>
       <div class="mobile-dropdown-content hidden pl-4">
-        <a href="./Services/Maintenance.html" class="block py-2 text-sm">Maintenance</a>
-        <a href="./Services/Installations.html" class="block py-2 text-sm">Installations</a>
-        <a href="./Services/Sales.html" class="block py-2 text-sm">Sales</a>
-        <a href="./Services/Fire Design.html" class="block py-2 text-sm">Fire Design</a>
-        <a href="./Services/Fire Suppression Systems.html" class="block py-2 text-sm">Fire Suppression Systems</a>
+        <a href="./Maintenance.html" class="block py-2 text-sm">Maintenance</a>
+        <a href="./Installations.html" class="block py-2 text-sm">Installations</a>
+        <a href="./Sales.html" class="block py-2 text-sm">Sales</a>
+        <a href="./Fire Design.html" class="block py-2 text-sm">Fire Design</a>
+        <a href="./Fire Suppression Systems.html" class="block py-2 text-sm">Fire Suppression Systems</a>
       </div>
     </div>
-    <a href="#about" class="block py-2">About</a>
-    <a href="#contact" class="block py-2">Contact</a>
+    <a href="../index.html#about" class="block py-2">About</a>
+    <a href="../index.html#contact" class="block py-2">Contact</a>
   </div>
 </header>
 
@@ -229,6 +229,33 @@
   const mobileMenu = document.getElementById("mobileMenu");
   menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
+  });
+
+  // Desktop dropdown toggle
+  const dropdown = document.querySelector('.dropdown');
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  dropdownToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('active');
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('active');
+    }
+  });
+
+  // Mobile dropdown toggle
+  const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
+  const mobileDropdownContent = document.querySelector('.mobile-dropdown-content');
+
+  mobileDropdownToggle.addEventListener('click', () => {
+    mobileDropdownContent.classList.toggle('hidden');
+    const svg = mobileDropdownToggle.querySelector('svg');
+    svg.style.transform = mobileDropdownContent.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
   });
 </script>
 
