@@ -25,12 +25,27 @@
       </a>
     </div>
 
-    <!-- Desktop Nav -->
+        <!-- Desktop Nav -->
     <nav class="nav-links hidden md:flex items-center">
-      <a href="../index.html">Home</a>
-      <a href="../index.html#services">Services</a>
-      <a href="../index.html#about">About</a>
-      <a href="../index.html#contact">Contact</a>
+      <a href="#hero">Home</a>
+      <!-- Services Dropdown -->
+      <div class="relative dropdown">
+        <button class="dropdown-toggle flex items-center">
+          Services
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <a href="./Services/Maintenance.html">Maintenance</a>
+          <a href="./Services/Installations.html">Installations</a>
+          <a href="./Services/Sales.html">Sales</a>
+          <a href="./Services/Fire Design.html">Fire Design</a>
+          <a href="./Services/Fire Suppression Systems.html">Fire Suppression Systems</a>
+        </div>
+      </div>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
 
     <!-- Mobile Menu Button -->
@@ -39,10 +54,25 @@
 
   <!-- Mobile Menu -->
   <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 bg-white">
-    <a href="../index.html" class="block py-2">Home</a>
-    <a href="../index.html#services" class="block py-2">Services</a>
-    <a href="../index.html#about" class="block py-2">About</a>
-    <a href="../index.html#contact" class="block py-2">Contact</a>
+    <a href="#hero" class="block py-2">Home</a>
+    <!-- Mobile Services Dropdown -->
+    <div class="mobile-dropdown">
+      <button class="mobile-dropdown-toggle block py-2 w-full text-left flex items-center justify-between">
+        Services
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="mobile-dropdown-content hidden pl-4">
+        <a href="./Services/Maintenance.html" class="block py-2 text-sm">Maintenance</a>
+        <a href="./Services/Installations.html" class="block py-2 text-sm">Installations</a>
+        <a href="./Services/Sales.html" class="block py-2 text-sm">Sales</a>
+        <a href="./Services/Fire Design.html" class="block py-2 text-sm">Fire Design</a>
+        <a href="./Services/Fire Suppression Systems.html" class="block py-2 text-sm">Fire Suppression Systems</a>
+      </div>
+    </div>
+    <a href="#about" class="block py-2">About</a>
+    <a href="#contact" class="block py-2">Contact</a>
   </div>
 </header>
 
